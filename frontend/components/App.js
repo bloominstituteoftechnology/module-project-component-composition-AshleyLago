@@ -18,10 +18,10 @@ function App() {
     getURL();
   }, []);
 
+  if (!nasaData) return <h3>Loading...</h3>;
   return (
     <div>
       <NasaApod title={nasaData.title} explanation={nasaData.explanation} imgUrl={nasaData.url} mediaType={nasaData.media_type} date={nasaData.date} copyright={nasaData.copyright}/>
-      <p>{console.log(nasaData)}</p>
     </div>
   )
 }
